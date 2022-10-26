@@ -5,10 +5,7 @@ const multer= require("multer");
 
 const app  = express();
 
-
-
 app.use(express.json())
-
 app.use( multer().any())
 
 // const url="";

@@ -31,25 +31,25 @@ const orderSchema = new mongoose.Schema({
   totalQuantity: {
     type: Number,
     required: true,
-    },
-    cancellable: {
-        type: Boolean,
-        default:true
-    },
-    status: {
-        type: String,
-        default: 'pending',
-        enum: ['pending', 'completed', 'cancelled'],
-        trim:true
-    },
-    deletedAt: {
-        type:Date
-    },
-    isDeleted: {
-        type: Boolean,
-        default:false
-    }
-},{timestamps:true});
+  },
+  cancellable: {
+    type: Boolean,
+    default: true
+  },
+  status: {
+    type: String,
+    default: 'pending',
+    enum: ['pending', 'completed', 'cancelled'],
+    trim: true
+  },
+  deletedAt: {
+    type: Date
+  },
+  isDeleted: {
+    type: Boolean,
+    default: false
+  }
+}, { timestamps: true });
 
 
 module.exports = mongoose.model("order", orderSchema);

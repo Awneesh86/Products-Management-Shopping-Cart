@@ -1,6 +1,4 @@
-const mongoose=require("mongoose")
-
-
+const mongoose = require("mongoose")
 const productSchema = new mongoose.Schema({
 
     title: { type: String, required: true, unique: true, trim: true },
@@ -19,10 +17,12 @@ const productSchema = new mongoose.Schema({
 
     style: { type: String, trim: true },
 
-    availableSizes: [{type: String,trim: true,
-        enum: ["S", "XS", "M", "X", "L", "XXL", "XL"] }],
+    availableSizes: [{
+        type: String, trim: true,
+        enum: ["S", "XS", "M", "X", "L", "XXL", "XL"]
+    }],
 
-        
+
     installments: { type: Number, trim: true, default: 0 },
 
     deletedAt: { type: Date, default: null },
